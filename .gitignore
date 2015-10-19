@@ -1,0 +1,10 @@
+*.elf
+*.eep
+*.lss
+*.hex
+*.o
+*.map
+*.d
+HW/AVR/ATMEGA8_NXBluetoothShutter/ATMEGA8_NXBluetoothShutter/Debug/Makefile
+*.mk
+*.srec

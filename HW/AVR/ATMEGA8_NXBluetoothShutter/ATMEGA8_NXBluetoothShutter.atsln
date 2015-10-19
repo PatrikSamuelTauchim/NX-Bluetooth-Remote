@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ATMEGA8_NXBluetoothShutter", "ATMEGA8_NXBluetoothShutter\ATMEGA8_NXBluetoothShutter.cproj", "{B1F12D60-BF42-41E4-96D1-F678786CD201}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1F12D60-BF42-41E4-96D1-F678786CD201}.Debug|AVR.ActiveCfg = Debug|AVR
+		{B1F12D60-BF42-41E4-96D1-F678786CD201}.Debug|AVR.Build.0 = Debug|AVR
+		{B1F12D60-BF42-41E4-96D1-F678786CD201}.Release|AVR.ActiveCfg = Release|AVR
+		{B1F12D60-BF42-41E4-96D1-F678786CD201}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
