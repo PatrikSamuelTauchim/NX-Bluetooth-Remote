@@ -1,4 +1,4 @@
-# NX-Bluetooth-Shutter
+# NX-Bluetooth-Remote
 DIY hardware and software developed to control Samsung NX1000 Camera remotely, using bluetooth (SPP) compatible device (Phone/PC/...).
 * Probably compatible with other NX cameras, but resistor of different value (in cable) AND/OR firmware may be needed.
 
