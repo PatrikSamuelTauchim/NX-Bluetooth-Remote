@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Atmel Studio Solution File, Format Version 11.00
-Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ATMEGA8_NXBluetoothShutter", "ATMEGA8_NXBluetoothShutter\ATMEGA8_NXBluetoothShutter.cproj", "{B1F12D60-BF42-41E4-96D1-F678786CD201}"
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ATMEGA8_NX-Bluetooth-Remote", "ATMEGA8_NX-Bluetooth-Remote\ATMEGA8_NX-Bluetooth-Remote.cproj", "{B1F12D60-BF42-41E4-96D1-F678786CD201}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

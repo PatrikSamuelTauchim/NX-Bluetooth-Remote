@@ -1,5 +1,5 @@
 /*
- * ATMEGA8_NXBluetoothShutter.c
+ * ATMEGA8_NX-Bluetooth-Remote.c
  *
  * Created: 9/29/2015 6:09:34 PM
  * Author: Patrik Samuel Tauchim
