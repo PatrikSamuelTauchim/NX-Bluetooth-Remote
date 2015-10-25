@@ -24,4 +24,4 @@ Price: DIY under 20€
 * Any Whatever-To-Serial port module can be used (WiFi)
 
 **Development status:**
-*20.10.2015 - Working prototype based on ATMEGA8 dev board - better HW ordered already.
+* 20.10.2015 - Working prototype based on ATMEGA8 dev board - better HW ordered already. Check wiki for picture :-)
