@@ -1,64 +1,84 @@
-// These constants won't change.  They're used to give names
-// to the pins used:
+#include <SoftwareSerial.h>
 
+// Pins
 int shutterPin = A0;                 // shutter connected to pin A0
 int focusPin = A1;                 // focus connected to pin A1
 int ledPin = 13;                 // LED connected to digital pin 13
 int btPin = 2;                 // Power to bluetooth module
+// software serial: RX = digital pin 4, TX = digital pin 3
+SoftwareSerial softSerial(4, 3);
 
 int sensorValue = 0;        // value read from ADC
 
+int MinDelay = 500; // Minimum delay between consecutive shots in miliseconds
+int MinHold = 50; // Minimum shutter hold time
+
 void setup() {
-  // initialize serial communications at 9600 bps:
-  Serial.begin(9600);
   pinMode(ledPin, OUTPUT);//BUILD IN LED (D3)
   pinMode(btPin, OUTPUT);//POWER ON BT (D2))
   digitalWrite(btPin, HIGH);//POWER ON BT (D2))
-  Serial.println("Start");
+
+  // Open serial communications and wait for port to open:
+  Serial.begin(9600);
+  while (!Serial) {
+    ; // wait for serial port to connect. Needed for native USB port only
+  }
+  // Start software serial port
+  softSerial.begin(9600);
+  Serial.println("Hello");
 }
 
 void loop() {
-  /*if (isCameraOn)//TODO
-    Serial.println("Camera is ON");
-    else
-    Serial.println("Camera is OFF");
-    delay(10);*/
+  softSerial.listen();
+
+  while (softSerial.available() > 0) {
+    int Count = softSerial.parseInt();
+    int Delay = softSerial.parseInt();
+    int Hold = softSerial.parseInt();
+
+    if (softSerial.read() == ';') {
+      DoCommand(Count, Delay, Hold);
+    }
+  }
 
   while (Serial.available() > 0) {
-    Serial.println("Serial.available");
-
-    // look for the next valid integer in the incoming serial stream:
     int Count = Serial.parseInt();
-    //Serial.println(Count);
-    // do it again:
     int Delay = Serial.parseInt();
-    //Serial.println(Delay);
+    int Hold = Serial.parseInt();
 
-    // look for the newline. That's the end of your
-    // sentence:
     if (Serial.read() == ';') {
-      Serial.print("Number of shots: ");
-      Serial.print(Count);
-      Serial.print(" Delay between shots: ");
-      Serial.println(Delay);
-      DoCommand(Count, Delay);
+      DoCommand(Count, Delay, Hold);
     }
   }
 }
 
-void DoCommand(int Count, int Delay) {
+void DoCommand(int Count, int Delay, int Hold) {
+  Serial.print("Got command to take ");
+  Serial.print(Count);
+  Serial.print(" shots with delay of ");
+  Serial.print(Delay);
+  Serial.print("ms. I will hold shutter for ");
+  Serial.print(Hold);
+  Serial.println(" ms between them.");
   int ShotsRemaining = Count;
   while (ShotsRemaining > 0) {
     ledOn();
-    TakeShot();
+    if (Delay < MinDelay)
+    {
+      Delay = MinDelay;
+      Serial.println("Setting minimum delay to " + MinDelay);
+    }
+    if (Hold < MinHold)
+    {
+      Hold = MinHold;
+      Serial.println("Setting minimum shutter hold time to " + MinHold);
+    }
+    TakeShot(Hold);
     ShotsRemaining -= 1;
     Serial.print("Shots remaining: ");
     Serial.println(ShotsRemaining);
     if (ShotsRemaining > 0) {
-      if (Delay < 100)//minimum delay
-        Delay=100;
-      else
-        delay(Delay);
+      delay(Delay);
     }
     ledOff();
   }
@@ -68,27 +88,27 @@ void DoCommand(int Count, int Delay) {
   Serial.println(Delay);
 }
 
+// Check if camera is turned ON
 bool isCameraOn() {
   sensorValue = analogRead(shutterPin);
   if (sensorValue >= 0)
   {
-    digitalWrite(ledPin, HIGH);   // turn the LED on (HIGH is the voltage level)
     Serial.print("A0 = ");
     Serial.println(sensorValue);
     return true;
   }
   else
   {
-    digitalWrite(ledPin, LOW);    // turn the LED off by making the voltage LOW
     Serial.print("A0 = ");
     Serial.println(sensorValue);
     return false;
   }
 }
-void TakeShot() {
+
+void TakeShot(int Hold) {
   pinMode(shutterPin, INPUT);
   digitalWrite(ledPin, HIGH);
-  delay(100);
+  delay(Hold);
   pinMode(shutterPin, OUTPUT);
   digitalWrite(ledPin, LOW);
 }

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical" >
+	
+	<TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:stretchColumns="0,1">
+		<TableRow android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<TextView
+				android:id="@+id/Status"
+				android:text="Status"
+			/>
+			<TextView
+				android:id="@+id/Battery"
+				android:text="Battery N/A%"
+			/>
+		</TableRow>
+	</TableLayout>
+	<Button
+		android:id="@+id/Connect"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Connect"/>
+	<!--Button
+		android:id="@+id/Focus"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Focus"/-->
+	<!--EditText android:id="@+id/remoteName"
+	          android:layout_width="fill_parent"
+	          android:layout_height="wrap_content"
+	          android:layout_weight="1"
+	          android:layout_gravity="bottom"
+	/-->
+	
+	<TextView
+		android:id="@+id/countLabel"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	/>
+	<SeekBar
+		android:id="@+id/countBar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	/>
+	<TextView
+		android:id="@+id/delayLabel"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	/>
+	<SeekBar
+		android:id="@+id/delayBar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	/>
+	<TextView
+		android:id="@+id/holdLabel"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	/>
+	<SeekBar
+		android:id="@+id/holdBar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+	/>
+	<Button
+		android:id="@+id/Shot"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="Do it!"/>
+
+</LinearLayout>

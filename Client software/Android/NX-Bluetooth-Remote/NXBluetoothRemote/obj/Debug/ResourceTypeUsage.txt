@@ -1,0 +1,6 @@
+LinearLayout
+TableLayout
+TableRow
+TextView
+Button
+SeekBar

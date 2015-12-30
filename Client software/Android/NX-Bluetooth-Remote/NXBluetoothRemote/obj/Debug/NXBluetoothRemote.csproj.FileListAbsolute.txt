@@ -1,0 +1,20 @@
+C:\Users\VM\Documents\SDP\NXBluetoothRemote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.csprojResolveAssemblyReference.cache
+C:\Users\VM\Documents\SDP\NXBluetoothRemote\NXBluetoothRemote\bin\Debug\NX Bluetooth Remote.apk
+C:\Users\VM\Documents\SDP\NXBluetoothRemote\NXBluetoothRemote\bin\Debug\NX Bluetooth Remote.d42map
+C:\Users\VM\Documents\SDP\NXBluetoothRemote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.dll
+C:\Users\VM\Documents\SDP\NXBluetoothRemote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.pdb
+C:\Users\Test\Documents\dot42\NXBluetoothRemote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.csprojResolveAssemblyReference.cache
+C:\Users\Test\Documents\dot42\NXBluetoothRemote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.dll
+C:\Users\Test\Documents\dot42\NXBluetoothRemote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.pdb
+C:\Users\Test\Documents\dot42\NXBluetoothRemote\NXBluetoothRemote\bin\Debug\NX Bluetooth Remote.apk
+C:\Users\Test\Documents\dot42\NXBluetoothRemote\NXBluetoothRemote\bin\Debug\NX Bluetooth Remote.d42map
+D:\Documents\dot42\Android\NXBluetoothRemote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.csprojResolveAssemblyReference.cache
+D:\Documents\dot42\Android\NXBluetoothRemote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.dll
+D:\Documents\dot42\Android\NXBluetoothRemote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.pdb
+D:\Documents\dot42\Android\NXBluetoothRemote\NXBluetoothRemote\bin\Debug\NX Bluetooth Remote.apk
+D:\Documents\dot42\Android\NXBluetoothRemote\NXBluetoothRemote\bin\Debug\NX Bluetooth Remote.d42map
+D:\Documents\GitHub\NX-Bluetooth-Remote\Client software\Android\NX-Bluetooth-Remote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\NX-Bluetooth-Remote\Client software\Android\NX-Bluetooth-Remote\NXBluetoothRemote\bin\Debug\NX Bluetooth Remote.apk
+D:\Documents\GitHub\NX-Bluetooth-Remote\Client software\Android\NX-Bluetooth-Remote\NXBluetoothRemote\bin\Debug\NX Bluetooth Remote.d42map
+D:\Documents\GitHub\NX-Bluetooth-Remote\Client software\Android\NX-Bluetooth-Remote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.dll
+D:\Documents\GitHub\NX-Bluetooth-Remote\Client software\Android\NX-Bluetooth-Remote\NXBluetoothRemote\obj\Debug\NXBluetoothRemote.pdb
