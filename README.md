@@ -4,7 +4,7 @@ DIY hardware and software developed to control Samsung NX1000 Camera remotely, u
 
 Price: DIY under 15€
 
-**Features done **
+**Features done:**
 * Remote shutter - Allows to take one shot
 * Continuous shooting - take specific amount of shots with defined delay between them
 * Android App for wireless control via Bluetooth
