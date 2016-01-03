@@ -20,7 +20,7 @@ Price: DIY under 15€
 * Matchbox size
 
 **Part list:**
-* [Avaliable on wiki](https://github.com/PatrikSamuelTauchim/NX-Bluetooth-Remote/wiki)
+* [Avaliable on wiki](https://github.com/PatrikSamuelTauchim/NX-Bluetooth-Remote/wiki/Hardware)
 
 **Schematics:**
 * [Avaliable on wiki](https://github.com/PatrikSamuelTauchim/NX-Bluetooth-Remote/wiki/Hardware)
