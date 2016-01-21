@@ -31,19 +31,23 @@ namespace NXBluetoothRemote
             
             public const int Connect = 0x7f040037;
             
-            public const int countLabel = 0x7f040038;
+            public const int startDelayLabel = 0x7f040038;
             
-            public const int countBar = 0x7f040039;
+            public const int startDelayBar = 0x7f040039;
             
-            public const int delayLabel = 0x7f04003a;
+            public const int countLabel = 0x7f04003a;
             
-            public const int delayBar = 0x7f04003b;
+            public const int countBar = 0x7f04003b;
             
-            public const int holdLabel = 0x7f04003c;
+            public const int delayLabel = 0x7f04003c;
             
-            public const int holdBar = 0x7f04003d;
+            public const int delayBar = 0x7f04003d;
             
-            public const int Shot = 0x7f04003e;
+            public const int holdLabel = 0x7f04003e;
+            
+            public const int holdBar = 0x7f04003f;
+            
+            public const int Shot = 0x7f040040;
         }
     }
 }

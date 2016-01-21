@@ -46,7 +46,8 @@ namespace NXBluetoothRemote
 		string RemoteName = "NX Remote";
 		string DebugTag = "NXBR";
 		
-		int count=0;
+		int startDelay=0;
+		int count=1;
 		int delay=0;
 		int hold=0;
 
@@ -62,23 +63,28 @@ namespace NXBluetoothRemote
 			ConnectB.Click += (s, x) => Connect();
 			DoItB.Click += (s, x) => DoIt();
 			
+			var startDelayBar = FindViewById<SeekBar>(R.Ids.startDelayBar);
 			var countBar = FindViewById<SeekBar>(R.Ids.countBar);
 			var delayBar = FindViewById<SeekBar>(R.Ids.delayBar);
 			var holdBar = FindViewById<SeekBar>(R.Ids.holdBar);
+			var startDelayLabel = FindViewById<TextView>(R.Ids.startDelayLabel);
 			var countLabel = FindViewById<TextView>(R.Ids.countLabel);
 			var delayLabel = FindViewById<TextView>(R.Ids.delayLabel);
 			var holdLabel = FindViewById<TextView>(R.Ids.holdLabel);
 			
 			ShowStatus("Hello");
-			countLabel.Text = "Take "+ count.ToString() +" photos";
-			delayLabel.Text = "with delay of " + delay.ToString()+"ms";
+			startDelayLabel.Text = "After "+ startDelay.ToString() +" seconds";
+			countLabel.Text = "take "+ count.ToString() +" photo(s)";
+			delayLabel.Text = "with delay of " + delay.ToString()+" seconds";
 			holdLabel.Text = "and hold shutter for " + hold.ToString()+"ms";
-
-			countBar.ProgressChanged += (s, x) => count = x.Progress;
-			delayBar.ProgressChanged += (s, x) => delay = x.Progress*100;
+			
+			startDelayBar.ProgressChanged += (s, x) => startDelay = x.Progress; //start delay in Seconds
+			countBar.ProgressChanged += (s, x) => count = x.Progress+1;
+			delayBar.ProgressChanged += (s, x) => delay = x.Progress*1000;
 			holdBar.ProgressChanged += (s, x) => hold = x.Progress*100;
-			countBar.ProgressChanged += (s, x) => countLabel.Text = "Take "+ count.ToString() +" photos";
-			delayBar.ProgressChanged += (s, x) => delayLabel.Text = "with delay of " + delay.ToString()+"ms";
+			startDelayBar.ProgressChanged += (s, x) => startDelayLabel.Text = "After "+ startDelay.ToString() +" seconds";
+			countBar.ProgressChanged += (s, x) => countLabel.Text = "take "+ count.ToString() +" photos";
+			delayBar.ProgressChanged += (s, x) => delayLabel.Text = "with delay of " + (delay/1000).ToString()+" seconds";
 			holdBar.ProgressChanged += (s, x) => holdLabel.Text = "and hold shutter for " + hold.ToString()+"ms";
 		}
 		
@@ -326,8 +332,8 @@ namespace NXBluetoothRemote
 		{
 			if (Connected)
 			{
-			SendStream.Write(Encoding.ASCII.GetBytes(count + "," + delay + "," + hold + ";"));
-			Log.I(DebugTag, "Sending: " + count + "," + delay + "," + hold + ";");
+			SendStream.Write(Encoding.ASCII.GetBytes(startDelay*1000 + "," + count + "," + delay + "," + hold + ";"));
+			Log.I(DebugTag, "Sending: " + startDelay*1000 + "," + + count + "," + delay + "," + hold + ";");
 			}
 			else
 			{

@@ -21,18 +21,17 @@
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:text="Connect"/>
-	<!--Button
-		android:id="@+id/Focus"
+	<TextView
+		android:id="@+id/startDelayLabel"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:text="Focus"/-->
-	<!--EditText android:id="@+id/remoteName"
-	          android:layout_width="fill_parent"
-	          android:layout_height="wrap_content"
-	          android:layout_weight="1"
-	          android:layout_gravity="bottom"
-	/-->
-	
+	/>
+	<SeekBar
+		android:id="@+id/startDelayBar"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:max="600"
+	/>	
 	<TextView
 		android:id="@+id/countLabel"
 		android:layout_width="fill_parent"
@@ -42,6 +41,7 @@
 		android:id="@+id/countBar"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
+		android:max="99"
 	/>
 	<TextView
 		android:id="@+id/delayLabel"
@@ -52,6 +52,7 @@
 		android:id="@+id/delayBar"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
+		android:max="600"
 	/>
 	<TextView
 		android:id="@+id/holdLabel"
