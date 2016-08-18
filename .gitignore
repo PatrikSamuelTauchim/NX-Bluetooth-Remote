@@ -8,3 +8,4 @@
 HW/AVR/ATMEGA8_NXBluetoothShutter/ATMEGA8_NXBluetoothShutter/Debug/Makefile
 *.mk
 *.srec
+*.pfx

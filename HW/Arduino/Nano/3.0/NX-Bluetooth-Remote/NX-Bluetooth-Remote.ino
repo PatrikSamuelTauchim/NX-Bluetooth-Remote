@@ -79,10 +79,6 @@ void DoCommand(long StartDelay, int Count, long Delay, int Hold) {
   }
   // Single shot
   else if (Count == 1) {
-    if (Delay < MinDelay)
-    {
-      Delay = MinDelay;
-    }
     if (Hold < MinHold)
     {
       Hold = MinHold;
@@ -92,6 +88,7 @@ void DoCommand(long StartDelay, int Count, long Delay, int Hold) {
       Focus();
     TakeShot(Hold);
     Serial.println("Single shot taken.");
+    softSerial.println("Single shot taken.");
   }
   // Series of shot
   else if (Count >> 1)
@@ -113,6 +110,8 @@ void DoCommand(long StartDelay, int Count, long Delay, int Hold) {
       ShotsRemaining -= 1;
       Serial.print("Shots remaining: ");
       Serial.println(ShotsRemaining);
+      softSerial.print("Shots remaining: ");
+      softSerial.println(ShotsRemaining);
 
       // Wait only if we have to take another shot(s)
       if (ShotsRemaining > 0) {
@@ -166,11 +165,13 @@ void DoInternal(long Delay, int Hold) {
     if (Debug) {
       Debug = false;
       Serial.println("Debug disabled");
+      softSerial.println("Debug disabled");
     }
     else
     {
       Debug = true;
       Serial.println("Debug enabled");
+      softSerial.println("Debug enabled");
     }
   }
   // Timing test
