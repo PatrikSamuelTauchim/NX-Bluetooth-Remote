@@ -6,6 +6,8 @@
 *.map
 *.d
 HW/AVR/ATMEGA8_NXBluetoothShutter/ATMEGA8_NXBluetoothShutter/Debug/Makefile
+Client software/WindowsUniversal/NXBluetoothRemote/NXBluetoothRemote/bin
+Client software/WindowsUniversal/NXBluetoothRemote/NXBluetoothRemote/obj
 *.mk
 *.srec
 *.pfx

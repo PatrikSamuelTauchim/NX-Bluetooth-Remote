@@ -35,17 +35,11 @@
         <Slider x:Name="countSlider" Margin="10,96,10,0" VerticalAlignment="Top" Maximum="100" Minimum="1" BorderThickness="0" Value="0" LargeChange="1" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="countTextBlock" Margin="10,78,10,0" TextWrapping="Wrap" Text="Number of photos to take" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="delayTextBlock" Margin="10,140,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2">
-            <Run Text="D"/>
-            <Run Text="elay b"/>
-            <Run Text="etween "/>
-            <Run Text="shots"/>
+            <Run Text="Delay between shots"/>
         </TextBlock>
         <Slider x:Name="delaySlider" Margin="10,158,10,0" VerticalAlignment="Top" Maximum="10000" Minimum="1" StepFrequency="100" BorderThickness="0" Value="0" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="holdTextBlock" Margin="10,202,10,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="Bold" Grid.ColumnSpan="2">
-            <Run Text="How long "/>
-            <Run Text="Shutter "/>
-            <Run Text="will be "/>
-            <Run Text="pressed"/>
+            <Run Text="How long Shutter will be pressed"/>
         </TextBlock>
         <Slider x:Name="holdSlider" Margin="10,220,10,0" Maximum="10000" Minimum="1" StepFrequency="100" BorderThickness="0" Value="0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <Button x:Name="DoButton" Content="Send" HorizontalAlignment="Right" Margin="0,269,10,0" VerticalAlignment="Top" FontWeight="Bold" Width="170" Click="button_Click" Height="37" Grid.ColumnSpan="2" IsEnabled="False"/>
